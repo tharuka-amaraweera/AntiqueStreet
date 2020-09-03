@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<!-- include A-Frame obviously -->
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<!-- include ar.js for A-Frame --> <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+<a-scene embedded arjs>
+<a-assets>
+<a-asset-item id="tree-obj" src="model.obj"></a-asset-item>
+</a-assets>
+<a-marker preset="hiro">
+      <a-text value="Antique Street" style="font-size:200px" position="2 0.5 -1.75" rotation="-90 57 -60"  color="#1201DA"></a-text>
+      <a-text value="Antique things have Stories" style="font-size:100px" position="1.25 0.5 -1.25" rotation="-90 57 -60" color="#80F200"></a-text>
+      <a-text value="Price: Rs. 5,000" style="font-size:200px" position="1.75 0.5 2" rotation="-90 57 -60"  color="#CA0F7D"></a-text>
+
+<a-entity obj-model="obj:#tree-obj;" material="src:doll.jpeg" position="2.5 -0.5 0.5" rotation="-90 57 -60" scale="1 1 1">
+</a-entity>
+</a-marker>
+<a-entity camera position="0 3 3" /></a-entity>
+</a-scene>
+</body>
+</html>
